@@ -64,10 +64,16 @@ public class Pet {
 
     //<<< Clean Arch / Port Method
     public void feed(FeedCommand feedCommand) {
-        //implement business logic here:
-
-        Fed fed = new Fed(this);
-        fed.publishAfterCommit();
+    energy = energy + 1;
+    weight = weight + 1;
+    
+    Fed fed = new Fed(this);
+    fed.publishAfterCommit();
+    
+    if(weight > 100){
+	    Overweighted overweighted = new Overweighted(this);
+	    overweighted.publishAfterCommit();
+        }
     }
 
     //>>> Clean Arch / Port Method

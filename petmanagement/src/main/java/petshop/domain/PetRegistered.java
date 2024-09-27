@@ -15,7 +15,6 @@ public class PetRegistered extends AbstractEvent {
     private String name;
     private Integer energy;
     private Integer appearance;
-    private Address address;
     private PetType petType;
     private Photo photo;
     private PetStatus petStatus;
